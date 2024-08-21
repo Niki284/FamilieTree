@@ -43,9 +43,26 @@ class PeopleController extends Controller
 
     public function search(Request $request)
     {
+        // $query = $request->input('query'); // Поиск по имени или фамилии
+        // $countryId = $request->input('country'); // ID страны
+
+        // $people = People::query()
+        //     ->when($query, function ($q) use ($query) {
+        //         $q->where('first_name', 'like', '%' . $query . '%')
+        //             ->orWhere('last_name', 'like', '%' . $query . '%');
+        //     })
+        //     ->when($countryId, function ($q) use ($countryId) {
+        //         $q->whereHas('countries', function ($countryQuery) use ($countryId) {
+        //             $countryQuery->where('countries.id', $countryId);
+        //         });
+        //     })
+        //     ->with('countries')
+        //     ->get();
+
+        // return view('people.search', compact('people'));
         $query = $request->input('query'); // Поиск по имени или фамилии
         $countryId = $request->input('country'); // ID страны
-
+    
         $people = People::query()
             ->when($query, function ($q) use ($query) {
                 $q->where('first_name', 'like', '%' . $query . '%')
@@ -57,8 +74,12 @@ class PeopleController extends Controller
                 });
             })
             ->with('countries')
-            ->get();
-
+            ->paginate(10); // Пагинация с 10 элементами на страницу
+    
+        if ($request->ajax()) {
+            return view('people.partials.people-list', compact('people'))->render();
+        }
+    
         return view('people.search', compact('people'));
     }
 
