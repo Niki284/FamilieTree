@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container mx-auto mt-5">
+<div class="container max-w-7xl mx-auto mt-5">
     <h1 class="text-3xl font-bold mb-6">Countries</h1>
     
     <!-- Add back admin -->

@@ -2,8 +2,8 @@
 
 @section('content')
 
-<div class="container mx-auto mt-5">
-    <h1 class="text-3xl font-bold mb-6">Create Country</h1>
+<div class="container max-w-7xl mx-auto mt-5">
+    <h1 class="text-3xl font-bold mb-6 text-center">Create Country</h1>
 
     <form action="{{ route('countries.store') }}" method="POST" enctype="multipart/form-data" class="max-w-lg mx-auto">
         @csrf

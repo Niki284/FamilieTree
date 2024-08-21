@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container mx-auto mt-5">
-    <h1 class="text-3xl font-bold mb-6">Edit Country</h1>
+<div class="container max-w-7xl mx-auto mt-5">
+    <h1 class="text-3xl font-bold text-center mb-6">Edit Country</h1>
 
     <form action="{{ route('countries.update', $country->id) }}" method="POST" enctype="multipart/form-data" class="max-w-lg mx-auto">
         @csrf

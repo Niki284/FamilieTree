@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container mt-5">
+<div class="container max-w-7xl mx-auto mt-5">
     <h1 class="mb-4 text-3xl font-bold text-center">Edit Person</h1>
 
     <form action="{{ route('peoples.update', $people->id) }}" method="POST" enctype="multipart/form-data" class="max-w-lg mx-auto">

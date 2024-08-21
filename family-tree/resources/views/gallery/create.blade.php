@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container mt-5">
+    <div class="container max-w-7xl mx-auto mt-5">
         <h1 class="mb-4 text-3xl font-bold text-center">Create Gallery</h1>
         <form action="{{ route('galleries.store', $person->id) }}" method="post" enctype="multipart/form-data" class="max-w-lg mx-auto">
             @csrf
