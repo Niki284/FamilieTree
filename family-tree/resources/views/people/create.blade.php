@@ -9,7 +9,7 @@
         @csrf
 
         <div class="mb-4">
-            <label for="first_name" class="block text-gray-700 font-bold mb-2">First Name</label>
+            <label for="first_name" class="block text-gray-700 font-bold mb-2">First Name<i class="text-red-500">*</i></label>
             <input type="text" name="first_name" id="first_name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
         </div>
 
@@ -41,7 +41,7 @@
         </div>
 
         <div class="mb-4">
-            <label for="birth_date" class="block text-gray-700 font-bold mb-2">Birth Date</label>
+            <label for="birth_date" class="block text-gray-700 font-bold mb-2">Birth Date<i class="text-red-500">*</i></label>
             <input type="date" name="birth_date" id="birth_date" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
         </div>
 
@@ -51,7 +51,7 @@
         </div>
         <div class="mb-4">
             <label for="birth_place" class="block text-gray-700 font-bold mb-2">Birth place</label>
-            <input type="text" name="birth_place" id="birth_place" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="birth_place">
+            <input type="text" name="birth_place" id="birth_place" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="birth place">
         </div>
 
         <div class="mb-4">
